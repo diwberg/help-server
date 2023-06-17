@@ -1,4 +1,4 @@
-export interface FeedbackCreateSchema {
+export interface FeedbackSchema {
     id?: string;
     type: string;
     comment: string;
@@ -6,5 +6,5 @@ export interface FeedbackCreateSchema {
 }
 
 export interface FeedbackRepository {
-    create: (data: FeedbackCreateSchema) => Promise<FeedbackCreateSchema>;
+    create: (data: FeedbackSchema) => Promise<void>;
 }
